@@ -1,6 +1,7 @@
 debian/changelog
 dpkg-buildpackage.log
 dpkg-buildpackage.version
+\#*#
 *.swp
 *.swo
 build-stamp
