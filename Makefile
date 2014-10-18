@@ -16,10 +16,7 @@
 
 NAME = configshell
 GIT_BRANCH = $$(git branch | grep \* | tr -d \*)
-GIT_DESC = $$(basename $$(git describe --tags | grep -o '[0-9].*$$'))
-GIT_LAST_TAG = $$(git describe --tags --abbrev=0 | grep -o '[0-9].*$$')
-GIT_PKG_TAG = $$(echo $(GIT_LAST_TAG) | tr - \~)
-VERSION = $$(echo $(GIT_DESC) | sed s/^$(GIT_LAST_TAG)/$(GIT_PKG_TAG)/)
+VERSION = $$(basename $$(git describe --tags | grep -o '[0-9].*$$') | sed 's/\(.*-[0-9]*\)-\([a-z0-9]*\)/\1~\2/g' | tr - .)
 
 .PHONY : version all clean cleanall release deb debinstall rpm
 
