@@ -4,7 +4,7 @@ ConfigShell is a Python library that provides a framework for building
 simple but nice CLI-based applications running both as single-command
 tools and interactive shells providing a UNIX filesystem-like navigation
 interface, as well as full autocompletion support and interactive inline help.
-It is part of LIO(tm).
+It is part of LIO.
 
 ## Usage scenarios
 
@@ -69,7 +69,7 @@ installed on your system in a location like `/usr/share/doc/python-configshell/`
 
 ## Author
 
-LIO(tm) was developed by Datera, Inc.
+LIO was developed by Datera, Inc.
 http://www.datera.io
 
 The original author and current maintainer is
